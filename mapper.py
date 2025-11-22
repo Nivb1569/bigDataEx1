@@ -17,6 +17,8 @@ def main(separator='\t'):
         # Reduce step, i.e. the input for reducer.py
         #
         # tab-delimited; the trivial word count is 1
+        word = word.strip(",.")
+        word = word.lower()
         for word in words:
             print ('%s%s%d' % (word, separator, 1))
 
