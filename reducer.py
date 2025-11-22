@@ -16,13 +16,18 @@ def main(separator='\t'):
     # and creates an iterator that returns consecutive keys and their group:
     #   current_word - string containing a word (the key)
     #   group - iterator yielding all [current_word, count] items
+    word_counts = []
     for current_word, group in groupby(data, itemgetter(0)):
         try:
             total_count = sum(int(count) for current_word, count in group)
-            print ("%s%s%d" % (current_word, separator, total_count))
+            word_counts.append((current_word, total_count))
         except ValueError:
             # count was not a number, so silently discard this item
             pass
+    word_counts.sort(key=itemgetter(1), reverse=True)
+    top3 = word_counts[:3]
+    for word, count in top3:
+        print("%s%s%d" % (word, separator, count))
 
 if __name__ == "__main__":
     main()
