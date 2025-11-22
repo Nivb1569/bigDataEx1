@@ -26,3 +26,6 @@ Q1. In the mapper only.
 Exercise 3:
 
 Q1. In the reducer only.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/600df648-bfd3-4403-8673-06577ac4d9c5" />
+
