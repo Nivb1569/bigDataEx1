@@ -22,3 +22,7 @@ this because each mapper produce output for every reducer, all these segments mu
 Exercise 2:
 
 Q1. In the mapper only.
+
+Exercise 3:
+
+Q1. In the reducer only.
